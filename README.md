@@ -8,6 +8,8 @@ You only need this plugin if you have unique domains mapped to you network sites
 
 When generating V2 keys, make sure to uncheck "Verify the origin of reCAPTCHA solutions", since this plugin verifies the origin by hostname check.
 
+This makes it possible to use only one set of keys for unlimited amount of mapped domains to the network.
+
 ## Installation
 
 1) Enter sitekey, privatekey and optionally secure IPs whom will not receive recaptcha check at login
@@ -16,7 +18,7 @@ When generating V2 keys, make sure to uncheck "Verify the origin of reCAPTCHA so
 
 ### Note
 
-Script is loaded at wp_authenticate (Before any connection to database is initiated etc.) to reduce server load for login tries with invalid recaptchas, hence the own DIE message, because you can't use wordpress admin login page error without initiating a database connection.
+Script is loaded at wp_authenticate, before any connection to database is initiated etc. to reduce server load for login tries with invalid recaptchas, hence the own DIE message, because you can't use wordpress admin login page error without initiating a database connection.
 
 ### Fun fact
 
