@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: WPNetwork reCaptcha
+Plugin Name: WordPress Network Login reCAPTCHA
 Plugin URI: http://
-Description: reCaptcha v2 for network installations
+Description: reCAPTCHA V2 for WordPress Network installations
 Version: 1.0.0
 Author: Jimmy Sjunfors / Swapi AB
 Author URI: https://swapi.se
@@ -14,9 +14,8 @@ $wpnre_sitekey = '';
 $wpnre_privatekey = '';
 $wpnre_secure_ips = array("");
 
-$wpnre_die_message = array();
-$wpnre_die_message[1] = "reCAPTCHA validation failed.";
-$wpnre_die_message[2] = "Return to login and try again.";
+$wpnre_die_message1 = "reCAPTCHA validation failed.";
+$wpnre_die_message2 = "Return to login and try again.";
 
 if (!in_array($_SERVER["REMOTE_ADDR"], $wpnre_secure_ips)) {
     add_action('login_form', 'wpnre_add_to_login');
@@ -53,19 +52,19 @@ function wpnre_auth_signon() {
                 if ($response["hostname"] == $_SERVER["HTTP_HOST"]) {
                     $wpnreerror = false;
                 } else {
-                    $wpnreerror = "Invalid reCaptcha hostname check";
+                    $wpnreerror = "Invalid reCAPTCHA hostname check";
                 }
             } else {
-                $wpnreerror = "Invalid reCaptcha (1)";
+                $wpnreerror = "Invalid reCAPTCHA (1)";
             }
         } else {
-            $wpnreerror = "Invalid reCaptcha (2)";
+            $wpnreerror = "Invalid reCAPTCHA (2)";
         }
 
         if ($wpnreerror) {
-            $diemessage = "<center><br><br>".$wpnre_die_message[1]."<br><br>
+            $diemessage = "<center><br><br>".$wpnre_die_message1."<br><br>
             Error: ".$wpnreerror."<br><br>
-            <a href='/wp-admin'>".$wpnre_die_message[1]."</a>";
+            <a href='/wp-admin'>".$wpnre_die_message2."</a>";
 
             DIE($diemessage);
         } else {
