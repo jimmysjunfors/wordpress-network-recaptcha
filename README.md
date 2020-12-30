@@ -2,7 +2,7 @@
 
 Add reCAPTCHA 2.0 to WordPress admin login on network installations, with hostname check.
 
-Please note that this plugin is not needed for regular network installations. You only need this plugin if you have unique domains mapped to you network sites for wp-admin, which may require other modifications to you WordPress installation and webserver, that are not covered by this plugin.
+Please note that this plugin is not needed for regular network installations. You only need this plugin if you have unique domains mapped to you network sites for wp-admin, which may require other modifications to your WordPress installation and webserver, that are not covered by this plugin.
 
 ## Important
 
@@ -13,7 +13,7 @@ This makes it possible to use only one set of keys for unlimited amount of mappe
 ## Installation
 
 1) Enter sitekey, privatekey and optionally secure IPs whom will not receive recaptcha check at login
-2) Upload plugin and network activate, or add it to mu-plugins
+2) Upload to plugin folder and network activate, or add it to mu-plugins folder
 3) Done, now every login at wp-admin will need to complete recaptcha check
 
 ### Note
