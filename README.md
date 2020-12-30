@@ -2,7 +2,7 @@
 
 Add reCAPTCHA 2.0 to WordPress admin login on network installations, with hostname check.
 
-You only need this plugin if you have unique domains mapped to you network sites for wp-admin.
+Please note that this plugin is not needed for regular network installations. You only need this plugin if you have unique domains mapped to you network sites for wp-admin, which may require other modifications to you WordPress installation and webserver, that are not covered by this plugin.
 
 ## Important
 
