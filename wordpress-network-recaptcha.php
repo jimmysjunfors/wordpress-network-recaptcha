@@ -10,13 +10,25 @@ Author URI: https://swapi.se
 
 defined('ABSPATH') or die();
 
+
+/*
+    ADD YOUR INFO HERE
+*/
 $wpnre_sitekey = '';
 $wpnre_privatekey = '';
 $wpnre_secure_ips = array("");
 
+
+/*
+    LANGUAGE SETTINGS FOR CUSTOM DIE MESSAGE
+*/
 $wpnre_die_message1 = "reCAPTCHA validation failed.";
 $wpnre_die_message2 = "Return to login and try again.";
 
+
+/*
+    DO NOT TOUCH BELOW UNLESS YOU NEED CUSTOMIZATION
+*/
 if (!in_array($_SERVER["REMOTE_ADDR"], $wpnre_secure_ips)) {
     add_action('login_form', 'wpnre_add_to_login');
     add_action('login_head', 'wpnre_add_to_head', 10);
